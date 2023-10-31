@@ -1,0 +1,27 @@
+# Ask for the user's height
+height = int(input("What is your height in centimeters? "))
+
+# Check if the user can ride the roller coaster
+if height < 120:
+    print("Can't ride.")
+else:
+    # Ask for the user's age
+    age = int(input("What is your age? "))
+
+    # Set the base bill amount based on age
+    if age <= 12:
+        bill = 5
+    elif age <= 18:
+        bill = 7
+    else:
+        bill = 12
+
+    # Ask if the user wants photos
+    want_photos = input("Do you want photos (yes/no)? ").lower()
+
+    # Check if the user wants photos and add the corresponding amount to the bill
+    if want_photos == "yes":
+        bill += 3
+
+    # Display the total bill amount
+    print(f"Total bill amount: ${bill}")
